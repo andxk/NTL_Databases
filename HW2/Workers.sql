@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS worker (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(50) NOT NULL,
+	dept int NOT NULL,
+	chief SERIAL REFERENCES worker(id)
+);
