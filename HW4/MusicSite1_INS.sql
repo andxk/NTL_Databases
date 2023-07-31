@@ -1,4 +1,4 @@
--- Наполнение таблиц музыкального сайта --
+-- РќР°РїРѕР»РЅРµРЅРёРµ С‚Р°Р±Р»РёС† РјСѓР·С‹РєР°Р»СЊРЅРѕРіРѕ СЃР°Р№С‚Р° --
 
 INSERT INTO genre ("name") VALUES ('Rock');
 INSERT INTO genre ("name") VALUES ('Pop');
@@ -60,6 +60,7 @@ INSERT INTO album_singer (singer_id, album_id) VALUES (4, 4);
 
 INSERT INTO track (name, len, album_id) VALUES ('Deja Vu', '00:04:00', 4);
 INSERT INTO track (name, len, album_id) VALUES ('My Kitty Kat', '00:03:55', 4);
+INSERT INTO track (name, len, album_id) VALUES ('Suga Mama', '00:03:25', 4);
 
 
 -- Collectioons --
