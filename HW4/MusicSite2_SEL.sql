@@ -49,7 +49,7 @@ ORDER BY genre_id;
 -- Количество треков, вошедших в альбомы 2019–2020 годов.
 
 SELECT count(*) FROM track t
-WHERE (SELECT album_year FROM album a WHERE t.album_id = a.id) BETWEEN 2018 AND 2020;
+WHERE (SELECT album_year FROM album a WHERE t.album_id = a.id) BETWEEN 2019 AND 2020;
 
 
 
