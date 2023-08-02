@@ -100,7 +100,7 @@ WHERE a.id IN (SELECT album_id FROM album_singer WHERE singer_id IN
 -- Наименования треков, которые не входят в сборники.
 
 SELECT name FROM track t 
-WHERE t.id NOT IN (SELECT track_id FROM collection_track);
+WHERE t.id NOT IN (SELECT DISTINCT(track_id) FROM collection_track);
 
 
 
