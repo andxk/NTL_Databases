@@ -31,8 +31,34 @@ WHERE name NOT LIKE ('% %');
 
 -- Название треков, которые содержат слово «мой» или «my».
 
+/*
+-- Тестовые треки
+INSERT INTO track (name, len, album_id) VALUES ('my own', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('own my', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('my', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('oh my god', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('myself', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('by myself', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('bemy self', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('myself by', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('by myself by', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('beemy', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('premyne', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('мойдодыр', '00:05:00', 4);
+INSERT INTO track (name, len, album_id) VALUES ('мой дыр', '00:05:00', 4);
+*/
+
+
+--SELECT name FROM track WHERE name ~* '(^| )my( |$)';  
+
+
 SELECT name FROM track
-WHERE lower(name) LIKE '%my%';  
+WHERE name ~* '\m(my|мой)\M';  
+
+
+-- Удаление тестовых треков
+--DELETE FROM track WHERE len = '00:05:00';
+
 
 
 
