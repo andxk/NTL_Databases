@@ -140,7 +140,7 @@ def print_pub_sale(publisher, session):
     for s in q7:
         print(s.stock.book.title.ljust(title_len),\
               s.stock.shop.name.ljust(shop_len), \
-              s.price, \
+              f'{s.price*s.count:<8}', \
               s.date_sale.date(), \
               s.stock.book.publisher.name, \
               sep=' | ' )
